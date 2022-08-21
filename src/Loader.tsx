@@ -63,10 +63,10 @@ export default function Loader({
   const styles = {
     ...style,
     ...{
-      '--size': size,
-      '--color': color,
-      '--animation-timing-function': animationTimingFunction,
-      '--animation-duration': animationDuration,
+      '--size': size || style?.['--size'],
+      '--color': color || style?.['--color'],
+      '--animation-timing-function': animationTimingFunction || style?.['--animation-timing-function'],
+      '--animation-duration': animationDuration || style?.['--animation-duration'],
     },
   };
 
