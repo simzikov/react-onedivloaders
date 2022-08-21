@@ -31,10 +31,6 @@
   "scripts": {
     "rollup": "rollup -c"
   },
-  "dependencies": {
-    "classnames": "^2.3.1",
-    "react": "^18.2.0"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-node-resolve": "^13.3.0",
@@ -48,5 +44,9 @@
     "sass": "^1.54.5",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0"
   }
 }
