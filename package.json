@@ -1,0 +1,53 @@
+{
+  "name": "react-onedivloaders",
+  "version": "0.0.1",
+  "description": "React component for onedivloaders, an open-source collection of monochrome loaders (loading spinners) built with pure CSS and one div element.",
+  "keywords": [
+    "react",
+    "react.js",
+    "loaders",
+    "preloaders",
+    "loading spinners",
+    "animated loaders",
+    "animated preloaders",
+    "animated loading spinners"
+  ],
+  "homepage": "https://github.com/simzikov/react-onedivloaders#readme",
+  "bugs": {
+    "url": "https://github.com/simzikov/react-onedivloaders/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simzikov/react-onedivloaders.git"
+  },
+  "license": "MIT",
+  "author": "Evgenii Simzikov <simzikov@gmail.com>",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/react": "^18.0.17",
+    "react": "^18.2.0",
+    "rollup": "^2.78.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.54.5",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0"
+  }
+}
