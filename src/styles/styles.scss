@@ -220,6 +220,32 @@
   }
 }
 
+// Circle spin 7
+
+.circle-spin-7 {
+  --size: 24px;
+  --color: currentColor;
+  --animation-timing-function: linear;
+  --animation-duration: 2s;
+  width: var(--size);
+  height: var(--size);
+  mask-image: radial-gradient(circle at 50% 50%, transparent calc(var(--size) / 4), black calc(var(--size) / 4));
+  background-image: conic-gradient(from 0deg, var(--color) 0deg, var(--color) 10deg, transparent 10deg, transparent 30deg, var(--color) 30deg, var(--color) 50deg, transparent 50deg, transparent 70deg, var(--color) 70deg, var(--color) 90deg, transparent 90deg, transparent 110deg, var(--color) 110deg, var(--color) 130deg, transparent 130deg, transparent 150deg, var(--color) 150deg, var(--color) 170deg, transparent 170deg, transparent 190deg, var(--color) 190deg, var(--color) 210deg, transparent 210deg, transparent 230deg, var(--color) 230deg, var(--color) 250deg, transparent 250deg, transparent 270deg, var(--color) 270deg, var(--color) 290deg, transparent 290deg, transparent 310deg, var(--color) 310deg, var(--color) 330deg, transparent 330deg, transparent 350deg, var(--color) 350deg, var(--color) 360deg);
+  border-radius: 50%;
+  transform: rotate(0deg);
+  animation: var(--animation-timing-function) var(--animation-duration) infinite circle-spin-7-animation;
+}
+
+@keyframes circle-spin-7-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 // Circle grow 1
 
 .circle-grow-1 {
@@ -437,6 +463,34 @@
 
   100% {
     transform: scale(1) rotate(360deg);
+  }
+}
+
+// Square spin 2
+
+.square-spin-2 {
+  --size: 24px;
+  --stroke-width: calc(var(--size) / 6);
+  --color: currentColor;
+  --animation-timing-function: linear;
+  --animation-duration: 2s;
+  width: var(--size);
+  height: var(--size);
+  background-image:
+    radial-gradient(circle at var(--stroke-width) var(--stroke-width), var(--color) 0%, var(--color) var(--stroke-width), transparent var(--stroke-width), transparent 100%),
+    radial-gradient(circle at calc(100% - var(--stroke-width)) var(--stroke-width), var(--color) 0%, var(--color) var(--stroke-width), transparent var(--stroke-width), transparent 100%),
+    radial-gradient(circle at calc(100% - var(--stroke-width)) calc(100% - var(--stroke-width)), var(--color) 0%, var(--color) var(--stroke-width), transparent var(--stroke-width), transparent 100%),
+    radial-gradient(circle at var(--stroke-width) calc(100% - var(--stroke-width)), var(--color) 0%, var(--color) var(--stroke-width), transparent var(--stroke-width), transparent 100%);
+  animation: var(--animation-timing-function) var(--animation-duration) infinite square-spin-2-animation;
+}
+
+@keyframes square-spin-2-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -725,6 +779,96 @@
 
   100% {
     transform: translate(0%, 0%);
+  }
+}
+
+
+// Square fill 1
+
+.square-fill-1 {
+  --size: 24px;
+  --color: currentColor;
+  --animation-timing-function: steps(2, start);
+  --animation-duration: 4s;
+  display: flex;
+  flex-direction: column;
+  width: var(--size);
+  height: var(--size);
+}
+
+.square-fill-1::before,
+.square-fill-1::after {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-color: var(--color);
+  transform: scaleX(0);
+}
+
+.square-fill-1::before {
+  align-self: flex-start;
+  transform-origin: center left;
+  animation: var(--animation-timing-function) var(--animation-duration) infinite square-fill-1-animation-before;
+}
+
+.square-fill-1::after {
+  align-self: flex-end;
+  transform-origin: center right;
+  animation: var(--animation-timing-function) var(--animation-duration) infinite square-fill-1-animation-after;
+  animation-delay: calc(var(--animation-duration) / 4);
+}
+
+@keyframes square-fill-1-animation-before {
+  0% {
+    transform: scaleX(0);
+    transform-origin: center left;
+  }
+
+  25% {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: center right;
+  }
+
+  75% {
+    transform: scaleX(0);
+    transform-origin: center right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: center right;
+  }
+}
+
+@keyframes square-fill-1-animation-after {
+  0% {
+    transform: scaleX(0);
+    transform-origin: center right;
+  }
+
+  25% {
+    transform: scaleX(1);
+    transform-origin: center right;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: center left;
+  }
+
+  75% {
+    transform: scaleX(0);
+    transform-origin: center left;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: center left;
   }
 }
 
