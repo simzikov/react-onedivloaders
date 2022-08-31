@@ -1,6 +1,6 @@
 {
   "name": "react-onedivloaders",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React component for onedivloaders, an open-source collection of monochrome loaders (loading spinners) built with pure CSS and one div element.",
   "keywords": [
     "react",
