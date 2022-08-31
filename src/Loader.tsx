@@ -40,6 +40,7 @@ type LoaderType =
 
 interface LoaderProps extends React.HTMLAttributes<HTMLElement> {
   as: ElementType;
+  alt?: string;
   type: LoaderType;
   size?: React.CSSProperties['fontSize'];
   color?: React.CSSProperties['color'];
@@ -49,6 +50,7 @@ interface LoaderProps extends React.HTMLAttributes<HTMLElement> {
 
 export default function Loader({
   as: Tag = 'div',
+  alt = 'Loading...',
   type,
   size,
   color,
@@ -70,5 +72,9 @@ export default function Loader({
     },
   };
 
-  return <Tag role="status" className={classes} style={styles} {...props} />;
+  return (
+    <Tag role="status" className={classes} style={styles} {...props}>
+      <span className="visually-hidden">{alt}</span>
+    </Tag>
+  );
 }

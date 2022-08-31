@@ -26,6 +26,26 @@ function Preloader() {
 
 ## Configuration
 
+### as
+
+**Type:**
+
+```
+as: ElementType;
+```
+
+**Description:** HTML tag that is rendered. Set to `div` by default.
+
+### alt
+
+**Type:**
+
+```
+alt?: string;
+```
+
+**Description:** Loader description for screen readers. Set to `"Loading..."` by default.
+
 ### type
 
 **Type:**
@@ -65,6 +85,7 @@ type LoaderType =
   | 'misc-1-vertical'
   | 'typing-1';
 ```
+
 **Description:** Loader variation. Equal to the unique classname of the corresponding loader.
 
 ### size (optional)
@@ -89,7 +110,7 @@ color?: React.CSSProperties['color'];
 
 ### animationTimingFunction (optional)
 
-**Type:** 
+**Type:**
 
 ```
 animationTimingFunction?: React.CSSProperties['animationTimingFunction'];
@@ -99,7 +120,7 @@ animationTimingFunction?: React.CSSProperties['animationTimingFunction'];
 
 ### animationDuration (optional)
 
-**Type:** 
+**Type:**
 
 ```
 animationDuration?: React.CSSProperties['animationDuration'];
