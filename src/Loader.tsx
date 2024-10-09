@@ -2,8 +2,6 @@ import { ElementType } from 'react';
 import classNames from 'classnames';
 import React from 'react';
 
-import './styles/styles.scss';
-
 type LoaderType =
   | 'circle-spin-1'
   | 'circle-spin-2'
@@ -12,6 +10,7 @@ type LoaderType =
   | 'circle-spin-5'
   | 'circle-spin-6'
   | 'circle-spin-7'
+  | 'circle-spin-8'
   | 'circle-grow-1'
   | 'circle-pulse-1'
   | 'circle-rotate-1-horizontal'
@@ -19,6 +18,7 @@ type LoaderType =
   | 'circle-packman-1'
   | 'square-spin-1'
   | 'square-spin-2'
+  | 'square-spin-3'
   | 'square-rotate-1-horizontal'
   | 'square-rotate-1-vertical'
   | 'square-rotate-2'

@@ -5,18 +5,13 @@ The official React component for [onedivloaders](https://onedivloaders.vercel.ap
 ## Installation
 
 ```
-npm i react-onedivloaders
-```
-
-or
-
-```
-yarn add react-onedivloaders
+npm i onedivloaders react-onedivloaders
 ```
 
 ## Usage
 
 ```
+import 'onedivloaders';
 import { Loader } from 'react-onedivloaders';
 
 function Preloader() {
@@ -59,6 +54,7 @@ type LoaderType =
   | 'circle-spin-5'
   | 'circle-spin-6'
   | 'circle-spin-7'
+  | 'circle-spin-8'
   | 'circle-grow-1'
   | 'circle-pulse-1'
   | 'circle-rotate-1-horizontal'
@@ -66,6 +62,7 @@ type LoaderType =
   | 'circle-packman-1'
   | 'square-spin-1'
   | 'square-spin-2'
+  | 'square-spin-3'
   | 'square-rotate-1-horizontal'
   | 'square-rotate-1-vertical'
   | 'square-rotate-2'
